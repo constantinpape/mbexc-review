@@ -21,7 +21,7 @@ def main():
     models = ["vit_b_lm", "vit_b_lm", "vit_b_em_organelles", "vit_b_em_organelles"]
     for image, model in zip(files, models):
         name = image[:-4]
-        out = f"embeddigns_{name}.bin"
+        out = f"embeddings_{name}.bin"
         if os.path.exists(out):
             continue
         compute_embeddings(image, model, out)
